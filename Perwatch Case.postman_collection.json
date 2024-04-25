@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "b2289e0d-4824-44f5-8b77-bb2021a7d700",
+		"name": "Perwatch Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13636781"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"Can\",\n    \"lastname\": \"Test\",\n    \"username\": \"mercan77\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mercan77\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODkzNzcsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMjk3NywiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.HUwSNZvk_nMbtVSnA07TTWErAREpwGuNmhzoZipBkRP8xfrmVR5dQ8clG0yf-O5BqrD490a5SZa0X0_TjPsPiA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Form",
+			"item": [
+				{
+					"name": "Create Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMTc0NjcsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAzMTA2NywiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.tuhes-5UxggufV2o13Gi_3pHM0hvE7l8THiBgYeGsJPP5KoIaKCV-zSDeF9ST_8D-LdbDNKcX6RcsRyIB0Pafg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"form_name\": \"Ürün Formu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Forms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMTQ4MzQsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAyODQzNCwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.EH2KtIa1831gvrn2vH86TSunLzfaPHaCesjCPd_fDUur65FpT9fImNh9hL7wOWiRV8P4hbdDDVPHNHvdAmJy-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMTQ4MzQsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAyODQzNCwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.EH2KtIa1831gvrn2vH86TSunLzfaPHaCesjCPd_fDUur65FpT9fImNh9hL7wOWiRV8P4hbdDDVPHNHvdAmJy-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/66299c8f7cacccb02e3f1160",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"66299c8f7cacccb02e3f1160"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Form Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODk1NzYsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMzE3NiwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.P5pWovS9EsphV3tgu1czrORoQoeB6sRuyux1gA7tegHP9glReLK2bvS7-OeYlvJuxxHU_2Bvv3bgy7RtwQumeA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"form_name\": \"Ürün Formu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/66299c8f7cacccb02e3f1160",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"66299c8f7cacccb02e3f1160"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTM5OTc3MjUsImZpcnN0bmFtZSI6IsSwYnJhaGltIiwiaWF0IjoxNzEzOTExMzI1LCJpZCI6IjY2MjdhMzM3OGMzNmJkMWM3ZDg5Yzc0YSIsImxhc3RuYW1lIjoiTWVyY2FuIiwidXNlcm5hbWUiOiJjYW43Nzc3In0.tF-HQ7bSK9Pu1WwE0jJ2D4YM9ICjSrntqoIWqMQ9FK4jG6Ca7608WT_galmWkdljmfw98WzjcTrrqVbk6Wth2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/66283ea48178887f5ef463cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"66283ea48178887f5ef463cd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Field",
+			"item": [
+				{
+					"name": "Create Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMjg1MzQsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDA0MjEzNCwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.vKl8bMvTBZrYoNM8hlQ7C5t-6BMYQ8QHeE-TFKzisnxl6O6vAIDUpW9nG4NQRzsLpfUWXF5uo3xmhUQe_Yq92Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"field_type\": \"checkbox\",\n    \"field_name\": \"Ürün Satışta\",\n    \"sort\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/field",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"field"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fields",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMjAwMjksImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAzMzYyOSwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.e3ooDAz6odjiQ2ZAjB6uIpyb_M3gSygWjJPW_6nejm5VoxRgk8p1fmMswlrcVwn0mOiO4JF_FMTXXdwQiAAgLw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/field",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"field"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwNTY0NDcsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxMzk3MDA0NywiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.kGdVvRGXgwy2rLireSVsRqdFy0bjnr6gublmN24twq0hIYNk7locKmNAn5gCGYgJvgxS6sX0FLhrl8PXlX8krw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/field/662a36463477ae5a2c1f2546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"field",
+								"662a36463477ae5a2c1f2546"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQxMjI1NDAsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAzNjE0MCwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.gT2dtI05Zgy-3M3G6hD3irtjbVy3FnlDBj4OcrCqVp6f7f1JNXJiuEEgAO75Ygf4DnEqHdU1V-NlxypUCAU9OA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a09ebe72c93efa6766453/field/662a0c9ae044b149057bf026",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a09ebe72c93efa6766453",
+								"field",
+								"662a0c9ae044b149057bf026"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Create Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwNTY0NDcsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxMzk3MDA0NywiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.kGdVvRGXgwy2rLireSVsRqdFy0bjnr6gublmN24twq0hIYNk7locKmNAn5gCGYgJvgxS6sX0FLhrl8PXlX8krw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fields\": [\n        {\n            \"name\": \"Ürün Adı\",\n            \"value\": \"1 Kilogram Su\"\n        },\n        {\n            \"name\": \"Stok Sayısı\",\n            \"value\": \"50\"\n        },\n        {\n            \"name\": \"Ürün Fiyatı\",\n            \"value\": 4\n        },\n        {\n            \"name\": \"Para Birimi\",\n            \"value\": \"EUR\"\n        },\n        {\n            \"name\": \"Ürün Satışta\",\n            \"value\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stocks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODk1NzYsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMzE3NiwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.P5pWovS9EsphV3tgu1czrORoQoeB6sRuyux1gA7tegHP9glReLK2bvS7-OeYlvJuxxHU_2Bvv3bgy7RtwQumeA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODk1NzYsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMzE3NiwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.P5pWovS9EsphV3tgu1czrORoQoeB6sRuyux1gA7tegHP9glReLK2bvS7-OeYlvJuxxHU_2Bvv3bgy7RtwQumeA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fields\": [\n        {\n            \"name\": \"Ürün Adı\",\n            \"value\": \"500 ml su\"\n        },\n        {\n            \"name\": \"Stok Sayısı\",\n            \"value\": \"50\"\n        },\n        {\n            \"name\": \"Ürün Fiyatı\",\n            \"value\": \"4\"\n        },\n        {\n            \"name\": \"Para Birimi\",\n            \"value\": \"TRY\"\n        },\n        {\n            \"name\": \"Ürün Satışta\",\n            \"value\": \"true\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a09ebe72c93efa6766453/stock/662a201cc9612e86835614f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a09ebe72c93efa6766453",
+								"stock",
+								"662a201cc9612e86835614f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stock Value",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODk1NzYsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMzE3NiwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.P5pWovS9EsphV3tgu1czrORoQoeB6sRuyux1gA7tegHP9glReLK2bvS7-OeYlvJuxxHU_2Bvv3bgy7RtwQumeA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ürün Adı\",\n    \"value\": \"Kahve\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a34c83477ae5a2c1f2542/stock/662a3c581a303636616908a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a34c83477ae5a2c1f2542",
+								"stock",
+								"662a3c581a303636616908a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQwODk1NzYsImZpcnN0bmFtZSI6IkNhbiIsImlhdCI6MTcxNDAwMzE3NiwiaWQiOiI2NjI5MWI0ODZhOTc4YjgwMTJjMzQ5MzQiLCJsYXN0bmFtZSI6IlRlc3QiLCJ1c2VybmFtZSI6Im1lcmNhbjc3In0.P5pWovS9EsphV3tgu1czrORoQoeB6sRuyux1gA7tegHP9glReLK2bvS7-OeYlvJuxxHU_2Bvv3bgy7RtwQumeA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fields\": [\n        {\n            \"name\": \"Ürün Adı\",\n            \"value\": \"500 ml su\"\n        },\n        {\n            \"name\": \"Stok Sayısı\",\n            \"value\": \"50\"\n        },\n        {\n            \"name\": \"Ürün Fiyatı\",\n            \"value\": \"4\"\n        },\n        {\n            \"name\": \"Para Birimi\",\n            \"value\": \"TRY\"\n        },\n        {\n            \"name\": \"Ürün Satışta\",\n            \"value\": \"true\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/form/662a09ebe72c93efa6766453/stock/662a201cc9612e86835614f4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"662a09ebe72c93efa6766453",
+								"stock",
+								"662a201cc9612e86835614f4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
